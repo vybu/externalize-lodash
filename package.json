@@ -1,0 +1,26 @@
+{
+  "name": "externalize-lodash",
+  "version": "1.0.0",
+  "description": "Externalizes lodash from you webpack bundle. Handles all import cases.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test-build && npm run test-copy && jest lib.spec.js",
+    "test-build": "webpack --config ./test/webpack.config.js --profile --json > ./test/dist/webpack.stats.json",
+    "test-copy": "cp ./test/index.html ./test/dist/index.html",
+    "test-serve": "http-server ./test/dist"
+  },
+  "keywords": [
+    "lodash",
+    "webpack",
+    "externals"
+  ],
+  "author": "Vytenis Butkevicius",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^23.6.0",
+    "puppeteer": "^1.11.0",
+    "serve": "^10.1.1",
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1"
+  }
+}
