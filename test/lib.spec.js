@@ -12,7 +12,10 @@ const server = http.createServer((request, response) => {
 describe('externalize-lodash', () => {
   let browser;
   beforeAll(async () => {
-    browser = await puppeteer.launch({ headless: false });
+    browser = await puppeteer.launch({
+      args: [ '–no-sandbox', '–disable-setuid-sandbox' ],
+      headless: false,
+    });
     await new Promise((r) => server.listen(3000, r));
   });
   afterAll(async () => {
@@ -44,7 +47,7 @@ describe('externalize-lodash', () => {
     });
     await page.evaluate(() => window.run());
 
-    expect(passMsg.length).toBe(5)
-    expect(failMsg.length).toBe(0)
+    expect(passMsg.length).toBe(5);
+    expect(failMsg.length).toBe(0);
   });
 });
