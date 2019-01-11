@@ -9,11 +9,8 @@
     "test-copy": "cp ./test/index.html ./test/dist/index.html",
     "test-serve": "http-server ./test/dist"
   },
-  "keywords": [
-    "lodash",
-    "webpack",
-    "externals"
-  ],
+  "keywords": [ "lodash", "webpack", "externals" ],
+  "files": [ "index.js" ],
   "author": "Vytenis Butkevicius",
   "license": "MIT",
   "devDependencies": {
