@@ -1,4 +1,6 @@
 This module exports a simple utility function that externalizes lodash from your bundle.
+
+`npm install webpack-externalize-lodash`
 __________________________________
 
 ## Why this is needed
