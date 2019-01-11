@@ -16,7 +16,7 @@ describe('externalize-lodash', () => {
       args: [ '–no-sandbox', '–disable-setuid-sandbox' ],
       headless: false,
     });
-    await new Promise((r) => server.listen(3000, r));
+    await new Promise((r) => server.listen(3030, r));
   });
   afterAll(async () => {
     await browser.close();
@@ -35,7 +35,7 @@ describe('externalize-lodash', () => {
     const passMsg = [];
     const failMsg = [];
     const page = await browser.newPage();
-    await page.goto('localhost:3000');
+    await page.goto('http://127.0.0.1:3030');
     page.on('console', (m) => {
       const msg = m.text();
       if (msg.indexOf('TEST_FAIL') > -1) {
