@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/vybu/externalize-lodash.svg?branch=master)](https://travis-ci.org/vybu/externalize-lodash)
+
 This module exports a simple utility function that externalizes lodash from your bundle.
 
 `npm install webpack-externalize-lodash`
