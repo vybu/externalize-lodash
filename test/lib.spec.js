@@ -14,7 +14,7 @@ describe('externalize-lodash', () => {
   beforeAll(async () => {
     browser = await puppeteer.launch({
       args: [ '–no-sandbox', '–disable-setuid-sandbox' ],
-      headless: false,
+      headless: true,
     });
     await new Promise((r) => server.listen(3030, r));
   });

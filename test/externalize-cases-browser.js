@@ -26,6 +26,7 @@ function test(fn, fnName) {
   }
 }
 
+// this is invoked by puppeteer
 window.run = () => {
   test(get, 'get')
   test(esGet, 'esGet')

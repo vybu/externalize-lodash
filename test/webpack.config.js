@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  entry:  path.resolve(__dirname, 'externalize-cases.browser.spec'),
+  entry:  path.resolve(__dirname, 'externalize-cases-browser'),
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
