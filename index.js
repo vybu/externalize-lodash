@@ -1,4 +1,4 @@
-module.exports = function (context, request, callback) {
+module.exports = function externalizeLodash(context, request, callback) {
   if (request.startsWith('lodash')) {
     // covers import/require 'lodash' and import 'lodash-es'
     if (request === 'lodash' || request === 'lodash-es') {
