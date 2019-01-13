@@ -1,7 +1,5 @@
-// TODO: rename to externalize-lodash
-
 module.exports = function (context, request, callback) {
-  if (/^lodash/.test(request)) {
+  if (request.startsWith('lodash')) {
     if (request === 'lodash' || request === 'lodash-es') {
       return callback(null, '_');
     } else if (request[6] === '.' || request[9] === '.') {
