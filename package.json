@@ -1,6 +1,6 @@
 {
   "name": "webpack-externalize-lodash",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Externalizes lodash from you webpack bundle. Handles all import cases.",
   "main": "index.js",
   "scripts": {

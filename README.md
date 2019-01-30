@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/vybu/externalize-lodash.svg?branch=master)](https://travis-ci.org/vybu/externalize-lodash)
+[![npm version](https://badge.fury.io/js/webpack-externalize-lodash.svg)](https://badge.fury.io/js/webpack-externalize-lodash)
 
 This module exports a simple utility function that externalizes lodash from your bundle.
 
@@ -25,9 +26,15 @@ As your project grows and depends on different libraries, some of them will use 
 
 Inside your webpack config
 
-```
+```js
 externals: [
-  {...}// your config,
-  require('webpack-externalize-lodash)
+  {...} // your config,
+  require('webpack-externalize-lodash')
 ]
-````
+```
+
+and load it inside your html file
+
+```html
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js"></script>
+```
